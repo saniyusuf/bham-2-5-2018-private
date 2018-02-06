@@ -6,6 +6,7 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
 import { StatsFiltersComponent } from './stats-filters/stats-filters.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.component';
 
 const dashBoardRoutes: Routes = [
   { path: '', component: VideoDashboardComponent }
@@ -16,6 +17,6 @@ const dashBoardRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(dashBoardRoutes)
   ],
-  declarations: [VideoDashboardComponent, VideoListComponent, VideoPlayerComponent, StatsFiltersComponent]
+  declarations: [VideoDashboardComponent, VideoListComponent, VideoPlayerComponent, StatsFiltersComponent, VideoThumbnailComponent]
 })
 export class DashboardModule { }

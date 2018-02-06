@@ -1,7 +1,7 @@
 <ul>
   <li (click)="setSelectedVideo(videoIndex)"
-      [class.selectedVideo]="videoIndex == selectedVideoIndex"
-      *ngFor="let video of videoList; index as videoIndex">
-    {{video.title}}
+      [class.selectedVideo]="videoIndex === selectedVideoIndex"
+      *ngFor="let videoData of videoList; index as videoIndex">
+    <app-video-thumbnail [video]="videoData"></app-video-thumbnail>
   </li>
 </ul>
