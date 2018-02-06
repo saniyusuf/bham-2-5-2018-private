@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-dashboard.component.css']
 })
 export class VideoDashboardComponent implements OnInit {
+  selectedVideo;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  videoSelectionChanged(video){
+    this.selectedVideo =  video;
   }
 
 }

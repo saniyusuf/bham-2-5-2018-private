@@ -3,10 +3,12 @@
 <div class="container">
   <div class="row">
     <div class="col3">
-      <app-video-list></app-video-list>
+      <app-video-list
+        (videoSelected)="videoSelectionChanged($event)">
+      </app-video-list>
     </div>
     <div class="col-6">
-      <app-video-player></app-video-player>
+      <app-video-player [video]="selectedVideo"></app-video-player>
     </div>
     <div class="col-3">
       <app-stats-filters></app-stats-filters>
