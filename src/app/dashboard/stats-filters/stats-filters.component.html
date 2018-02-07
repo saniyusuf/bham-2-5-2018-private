@@ -1,3 +1,18 @@
-<p>
-  stats-filters works!
-</p>
+<form [formGroup]="statsFormGroup">
+  <label for="videoName"></label>
+  <input formControlName="videoName" id="videoName" name="videoName">
+
+  <label for="gender"></label>
+  <fieldset id="gender">
+    <input formControlName="gender" type="radio" name="gender" value="male"> Male<br>
+    <input formControlName="gender" type="radio" name="gender" value="female"> Female<br>
+    <input formControlName="gender" type="radio" name="gender" value="other"> Other
+  </fieldset>
+
+  <fieldset id="ageGroup">
+    <input formControlName="millenial" type="checkbox" name="gender" value="male"> Millennial<br>
+    <input formControlName="other" type="checkbox" name="gender" value="male"> Other Folks<br>
+  </fieldset>
+  <pre>{{statsFormGroup.valueChanges | async | json}}</pre>
+
+</form>
